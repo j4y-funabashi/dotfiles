@@ -212,7 +212,7 @@ EOF
 
 "----- telescope
 " Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader><leader> <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
@@ -222,3 +222,6 @@ lua << END
 require'lualine'.setup()
 END
 
+" --- Plugins
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_command = "golangci-lint"
