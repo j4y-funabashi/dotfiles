@@ -28,3 +28,5 @@ alias t="task"
 nn() {
 	vim $NOTES_DIR/inbox.md
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
