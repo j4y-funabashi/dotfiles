@@ -17,6 +17,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tree-sitter/tree-sitter-go'
 
 Plug 'sainnhe/everforest'
+Plug 'tomasiser/vim-code-dark'
 
 " -- completion
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -225,4 +226,4 @@ END
 " --- Plugins
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_command = "golangci-lint"
-let g:go_metalinter_enabled = ['vet', 'revive', 'errcheck']
+let g:go_metalinter_enabled = ['vet', 'errcheck']
