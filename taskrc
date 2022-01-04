@@ -1,0 +1,29 @@
+# [Created by task 2.0.0 8/4/2013 10:46:11]
+# Taskwarrior program configuration file.
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-faq',
+# 'man task-tutorial', 'man task-color', 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=/home/jayr/notes/tasks
+
+# Color theme (uncomment one to use)
+include /usr/share/task/dark-gray-blue-256.theme
+
+report.next.columns=id,project,tags,description
+report.next.labels=id,project,tags,description
+
+#report.ls.columns=id,project,description
+#report.ls.labels=id,project,description
+uda.reviewed.type=date
+uda.reviewed.label=Reviewed
+report._reviewed.description=Tasksh review report.  Adjust the filter to your needs.
+report._reviewed.columns=uuid
+report._reviewed.sort=reviewed+,modified+
+report._reviewed.filter=( reviewed.none: or reviewed.before:now-1week ) and ( +PENDING or +WAITING )

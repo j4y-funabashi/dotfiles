@@ -29,4 +29,19 @@ nn() {
 	vim $NOTES_DIR/inbox.md
 }
 
+nf() {
+    cd $NOTES_DIR
+    vim `fzf --preview="cat {}" --preview-window=right:70%:wrap`
+}
+
+nreview() {
+    ranger $NOTES_DIR
+}
+
+nsync() {
+}
+
+setxkbmap -layout gb -option ctrl:nocaps
+
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
