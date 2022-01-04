@@ -19,6 +19,9 @@ Plug 'tree-sitter/tree-sitter-go'
 Plug 'sainnhe/everforest'
 Plug 'tomasiser/vim-code-dark'
 
+
+Plug 'tpope/vim-sleuth'
+
 " -- completion
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
