@@ -26,7 +26,7 @@ alias t="task"
 
 # func
 nn() {
-	vim $NOTES_DIR/inbox.md
+	vim $NOTES_DIR/inbox/`date +%F`.md
 }
 
 nf() {
