@@ -19,6 +19,8 @@ Plug 'tree-sitter/tree-sitter-go'
 Plug 'sainnhe/everforest'
 Plug 'tomasiser/vim-code-dark'
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 Plug 'tpope/vim-sleuth'
 
@@ -42,6 +44,10 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'rafamadriz/friendly-snippets'
 
 Plug 'fatih/vim-go'
+
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
 
 
 call plug#end()
@@ -225,8 +231,3 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 lua << END
 require'lualine'.setup()
 END
-
-" --- Plugins
-let g:go_metalinter_autosave = 1
-let g:go_metalinter_command = "golangci-lint"
-let g:go_metalinter_enabled = ['vet', 'errcheck']

@@ -1,4 +1,4 @@
-export ZSH="/home/jay-robinson/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="dst"
 HIST_STAMPS="yyyy-mm-dd"
 
@@ -26,6 +26,7 @@ alias t="task"
 
 # func
 nn() {
+    cd $NOTES_DIR;
 	vim $NOTES_DIR/inbox/`date +%F`.md
 }
 
@@ -39,6 +40,12 @@ nreview() {
 }
 
 nsync() {
+    cd $NOTES_DIR;
+    git add -A
+    git commit -m "$USER@$HOST"
+    git fetch origin
+    git merge origin/main
+    git push origin main
 }
 
 setxkbmap -layout gb -option ctrl:nocaps
