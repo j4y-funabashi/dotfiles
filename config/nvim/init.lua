@@ -112,11 +112,12 @@ require('lazy').setup({
     },
   },
 
-  { -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+  {
+    'catppuccin/nvim',
+    as = "catppuccin",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd.colorscheme 'catppuccin-macchiato'
     end,
   },
 
@@ -171,6 +172,9 @@ require('lazy').setup({
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   },
+
+  -- markdown stuff
+  {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
@@ -413,6 +417,7 @@ local servers = {
   -- rust_analyzer = {},
   tsserver = {},
 
+  marksman = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },

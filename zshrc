@@ -10,8 +10,8 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG=en_GB.UTF-8
 
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 #export TERM=xterm-256color
 
@@ -20,16 +20,17 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export NOTES_DIR=$HOME/notes
+export ZK_NOTEBOOK_DIR=$NOTES_DIR
 
 # aliases
 alias vim="nvim"
 alias vi="nvim"
-alias t="task"
+alias t="todo.sh -Ant"
 
 # func
 nn() {
     cd $NOTES_DIR;
-	vim $NOTES_DIR/inbox/`date +%F`.md
+    vim $NOTES_DIR/000-inbox.md
 }
 
 nf() {
@@ -51,6 +52,3 @@ nsync() {
 }
 
 setxkbmap -layout gb -option ctrl:nocaps
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
