@@ -2,7 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="dst"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git aws docker docker-compose taskwarrior fzf)
+plugins=(git fzf)
 
 source $ZSH/oh-my-zsh.sh
 
