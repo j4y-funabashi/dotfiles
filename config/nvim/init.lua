@@ -175,6 +175,13 @@ require('lazy').setup({
 
   -- markdown stuff
   {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
+  {'jakewvincent/mkdnflow.nvim',
+     config = function()
+        require('mkdnflow').setup({
+            -- Config goes here; leave blank for defaults
+        })
+     end
+},
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
@@ -412,12 +419,12 @@ end
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
   -- clangd = {},
+  marksman = {},
   gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
   tsserver = {},
 
-  marksman = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
