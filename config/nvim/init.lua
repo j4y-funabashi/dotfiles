@@ -175,13 +175,12 @@ require('lazy').setup({
 
   -- markdown stuff
   {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
-  {'jakewvincent/mkdnflow.nvim',
-     config = function()
-        require('mkdnflow').setup({
-            -- Config goes here; leave blank for defaults
-        })
-     end
-},
+  {
+    'Furkanzmc/zettelkasten.nvim',
+    opts = {
+      notes_path = '~/notes'
+    }
+  },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
