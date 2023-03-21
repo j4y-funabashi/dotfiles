@@ -181,6 +181,7 @@ require('lazy').setup({
       notes_path = '~/notes'
     }
   },
+  'dkarter/bullets.vim',
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
