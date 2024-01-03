@@ -20,36 +20,23 @@ export TODOTXT_DEFAULT_ACTION=ls
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
-export NOTES_DIR=$HOME/notes
-export ZK_NOTEBOOK_DIR=$NOTES_DIR
+
+export DENO_INSTALL="/home/jay-robinson/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+## config
+source "$HOME/.zsh/gtd.zsh"
+[ -f "$HOME/.zsh/secrets.zsh" ] && source "$HOME/.zsh/secrets.zsh"
+[ -f "$HOME/.zsh/work.zsh" ] && source "$HOME/.zsh/work.zsh"
 
 # aliases
 alias vim="nvim"
 alias vi="nvim"
 alias t="todo.sh -Ant"
-
-# func
-nn() {
-    cd $NOTES_DIR;
-    vim $NOTES_DIR/000-inbox.md
-}
-
-nf() {
-    cd $NOTES_DIR
-    vim `fzf --preview="cat {}" --preview-window=right:70%:wrap`
-}
-
-nreview() {
-    ranger $NOTES_DIR
-}
-
-nsync() {
-    cd $NOTES_DIR;
-    git add -A
-    git commit -m "$USER@$HOST"
-    git fetch origin
-    git merge origin/main
-    git push origin main
-}
+alias bat="batcat"
 
 setxkbmap -layout gb -option ctrl:nocaps
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
