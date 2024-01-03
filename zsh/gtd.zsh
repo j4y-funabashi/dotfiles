@@ -1,3 +1,4 @@
+export TODOTXT_DEFAULT_ACTION=ls
 export NOTES_DIR=$HOME/notes
 export ZK_NOTEBOOK_DIR=$NOTES_DIR
 

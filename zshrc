@@ -13,8 +13,6 @@ export LANG=en_GB.UTF-8
 export EDITOR=nvim
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-#export TERM=xterm-256color
-export TODOTXT_DEFAULT_ACTION=ls
 
 # PATHZ
 export PATH=$PATH:/usr/local/go/bin
