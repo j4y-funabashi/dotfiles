@@ -5,7 +5,7 @@ export ZK_NOTEBOOK_DIR=$NOTES_DIR
 # func
 nn() {
     cd $NOTES_DIR;
-    vim $NOTES_DIR/000-inbox.md
+    vim "${NOTES_DIR}/inbox/$(date +%Y%m%d).md"
 }
 
 nf() {
