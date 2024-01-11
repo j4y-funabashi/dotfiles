@@ -18,10 +18,21 @@ nreview() {
 }
 
 nsync() {
+    nindex
+
     cd $NOTES_DIR;
     git add -A
     git commit -m "$USER@$HOST"
     git fetch origin
     git merge origin/main
     git push origin main
+}
+
+nindex() {
+    cd $NOTES_DIR;
+    _n_index_projects
+}
+
+_n_index_projects() {
+    find . -iname "*prjx*" -exec awk 'NR==1&&/^#.*/{sub("# ",""); print "* ["$0"]("FILENAME")"}' {} \; > 000-projects.md
 }
