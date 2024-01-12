@@ -34,5 +34,5 @@ nindex() {
 }
 
 _n_index_projects() {
-    find . -iname "*prjx*" -exec awk 'NR==1&&/^#.*/{sub("# ",""); print "* ["$0"]("FILENAME")"}' {} \; > 000-projects.md
+    find . -iname "*prjx*" -exec awk 'NR==1&&/^#.*/{sub("# ",""); print "* ["$0"]("FILENAME")"}' {} \; | sort > 000-projects.md
 }
