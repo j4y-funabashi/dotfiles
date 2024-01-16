@@ -22,16 +22,16 @@ export PATH=$PATH:$GOPATH/bin
 export DENO_INSTALL="/home/jay-robinson/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-## config
-source "$HOME/.zsh/gtd.zsh"
-[ -f "$HOME/.zsh/secrets.zsh" ] && source "$HOME/.zsh/secrets.zsh"
-[ -f "$HOME/.zsh/work.zsh" ] && source "$HOME/.zsh/work.zsh"
-
 # aliases
 alias vim="nvim"
 alias vi="nvim"
 alias t="todo.sh -Ant"
 alias bat="batcat"
+
+## config
+source "$HOME/.zsh/gtd.zsh"
+[ -f "$HOME/.zsh/secrets.zsh" ] && source "$HOME/.zsh/secrets.zsh"
+[ -f "$HOME/.zsh/work.zsh" ] && source "$HOME/.zsh/work.zsh"
 
 setxkbmap -layout gb -option ctrl:nocaps
 
