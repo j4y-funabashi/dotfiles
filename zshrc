@@ -18,6 +18,7 @@ export EDITOR="$VISUAL"
 export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/.local/bin
 
 export DENO_INSTALL="/home/jay-robinson/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
@@ -38,3 +39,5 @@ setxkbmap -layout gb -option ctrl:nocaps
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(zoxide init zsh)"
