@@ -1,12 +1,7 @@
 regolith.look.path: /usr/share/regolith-look/catppuccin
 
-regolith.wallpaper.file: ~/dotfiles/wallpaper01.jpg
+regolith.wallpaper.file: ~/dotfiles/wallpaper/wallpaper02.png
 
 wm.bar.position: top
-
-wm.workspace.01.name: 1 1:Comms
-wm.workspace.02.name: 2 2:Web
-wm.workspace.03.name: 3 3:IDE
-wm.workspace.04.name: 4 4:terminal
 
 i3xrocks.date.format2: %Y-%m-%d %H:%M
