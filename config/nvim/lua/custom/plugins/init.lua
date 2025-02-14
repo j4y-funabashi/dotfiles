@@ -38,4 +38,13 @@ return {
 			-- your configuration comes here; leave empty for default settings
 		},
 	},
+
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 2000,
+		init = function()
+			vim.cmd.colorscheme("catppuccin-mocha")
+		end,
+	},
 }
