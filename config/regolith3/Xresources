@@ -1,6 +1,7 @@
 regolith.look.path: /usr/share/regolith-look/catppuccin
 
-regolith.wallpaper.file: ~/dotfiles/wallpaper/wallpaper02.png
+regolith.wallpaper.file: ~/dotfiles/wallpaper/wallpaper01.jpg
+regolith.lockscreen.wallpaper.file:
 
 wm.bar.position: top
 
